@@ -25,6 +25,8 @@
 
 #include <xapian.h>
 
+using Xapian::useconds_t;
+
 #include <fstream>
 #include <iostream>
 #include <string>
