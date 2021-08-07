@@ -32,7 +32,7 @@ install:
       $env:CONFIGOPTS+=" --disable-documentation"
       $env:CONFIGOPTS+=" --disable-backend-honey"
       $env:CONFIGOPTS+=" --with-python3"
-  - bash -c 'time ./bootstrap --fetch-url-command="curl --retry 5 --retry-connrefused -L" xapian-core xapian-bindings'
+  - bash -c 'time ./bootstrap --fetch-url-command="curl --retry 5 --retry-connrefused -L" xapian-core'
   - if defined VCVARS_BAT call %VCVARS_BAT%
   - if "%TOOLCHAIN%"=="msvc" mkdir zlib
   - if "%TOOLCHAIN%"=="msvc" cd zlib
