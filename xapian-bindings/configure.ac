@@ -52,7 +52,7 @@ fi
 dnl Use libtool to manage our libraries, but don't build static libraries as
 dnl the bindings only have a use for dynamic ones.
 LT_PREREQ([2.2.6])
-LT_INIT([disable-static])
+LT_INIT([disable-static win32-dll])
 
 dnl -no-undefined causes problems on Mac OS X with at least some
 dnl MACOSX_DEPLOYMENT_TARGET settings, so only pass -no-undefined on
