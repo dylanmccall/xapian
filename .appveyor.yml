@@ -29,6 +29,7 @@ install:
   - ps: |
       $env:PATH="c:\msys64\usr\bin;c:\doxygen;${env:PATH}"
       $env:CONFIGOPTS="--prefix=/c/projects/xapian/out"
+      $env:CONFIGOPTS+=" --host=x86_64-pc-cygwin"
       $env:CONFIGOPTS+=" --disable-documentation"
       $env:CONFIGOPTS+=" --disable-backend-honey"
       $env:CONFIGOPTS+=" --with-python3"
