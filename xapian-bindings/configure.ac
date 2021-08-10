@@ -468,10 +468,8 @@ if test no != "$with_python3" ; then
 
 	AC_MSG_CHECKING([for python3 libraries to link against])
 	case $host_os in
-	mingw* | pw32*)
-	  PYTHON3_LIBS=`$PYTHON3 -c 'import os,sys;print("-L"+os.path.join(sys.prefix,"libs").replace(os.sep,"/")+" -lpython"+sys.version[[:3]].replace(".",""))'` ;;
-	cygwin*)
-	  PYTHON3_LIBS=`$PYTHON3 -c 'import os,sys;print("-L"+os.path.join(sys.path[[3]],"config")+" -lpython"+sys.version[[:3]])'` ;;
+	mingw* | pw32* | cygwin*)
+	  PYTHON3_LIBS=`$PYTHON3 -c 'import os,sys;print("-L"+os.path.join(sys.prefix,"libs").replace(os.sep,"/").replace("C:/", "/c/")+" -lpython"+sys.version[[:3]].replace(".",""))'` ;;
 	*)
 	  PYTHON3_LIBS= ;;
 	esac
