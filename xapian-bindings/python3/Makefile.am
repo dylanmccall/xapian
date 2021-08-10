@@ -59,7 +59,7 @@ uninstall-local:
 
 AM_CPPFLAGS = -I$(PYTHON3_INC)
 AM_CXXFLAGS = $(SWIG_CXXFLAGS) $(XAPIAN_CXXFLAGS)
-_xapian_la_LDFLAGS = -avoid-version -module -shrext "$(PYTHON3_SO)" $(NO_UNDEFINED)
+_xapian_la_LDFLAGS = -static-libstdc++ -static-libgcc -avoid-version -module -shrext "$(PYTHON3_SO)" $(NO_UNDEFINED)
 _xapian_la_SOURCES = xapian_wrap.cc
 _xapian_la_LIBADD = $(XAPIAN_LIBS) $(PYTHON3_LIBS)
 
